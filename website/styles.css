@@ -13,7 +13,7 @@
     bottom: 80px;
     right: 20px;
     width: 400px;
-    height: 700px;
+    height: 600px;
     background-color: white;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -21,7 +21,7 @@
 }
 
 .chat-toggle-btn {
-    background-color: #1A75CF;
+    background-color: #ff589e;
     color: white;
     padding: 10px 20px;
     border: none;
