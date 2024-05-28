@@ -60,6 +60,36 @@ IVA is a prototype chatbot designed to retrieve and generate answers to policy h
 3. **Deploy the chatbot on EC2**:
 
     - Deploy the chatbot on EC2 using the commands in setup folder.
+      ```bash
+    #!/bin/bash
+    # Update package index
+    sudo yum update -y
+    
+    # Install Git
+    sudo yum install git -y
+    
+    # Install Docker
+    sudo yum install docker -y
+    
+    # Start Docker service
+    sudo service docker start
+    
+    # Enable Docker to start on boot
+    sudo chkconfig docker on
+    
+    # Clone Streamlit app repository
+    git clone https://github.com/arpan65/Insurance-RAG-Chatbot.git
+    cd Insurance-RAG-Chatbot/ChatUI/ChatApp
+    
+    # Build Docker image
+    sudo docker build -t chatApp .
+    
+    # Run Docker container
+    sudo docker run -d -p 8501:8501 chatApp
+    
+    echo "Streamlit app deployed. You can access it at http://$(curl -s http://169.254.169.254/latest/meta-data/public-ipv4):8501"
+
+      ```
   
 4. **Deploy the AWS Services**:
 
@@ -74,6 +104,7 @@ IVA is a prototype chatbot designed to retrieve and generate answers to policy h
     - IAM roles for Lambda functions.
     - Lambda functions for document processing and embedding generation.
     - S3 event notifications to trigger Lambda functions.
+    - Update the chatbot URL in website/index.html.
       
 5. **Configure Nginx for HTTPS (optional)**:
 
