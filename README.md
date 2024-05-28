@@ -76,7 +76,7 @@ IVA(Insurance Virtual Agent) is a prototype chatbot designed to retrieve and gen
 
     - If you need to secure your application with HTTPS, set up Nginx as a reverse proxy and configure SSL certificates.
 
-### Usage
+## Usage
 
 - Create a /docs folder in rag-source bucket.
 - Upload the policy document in the docs folder with proper naming convention (i.e sample_policy_doc_{policy number}.
