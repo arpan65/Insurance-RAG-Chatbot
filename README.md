@@ -44,18 +44,14 @@ IVA is a prototype chatbot designed to retrieve and generate answers to policy h
 1. **Clone the repository**:
 
     ```bash
-    git clone [https://github.com/your-repo/IVA.git](https://github.com/arpan65/Insurance-RAG-Chatbot)
+    git clone https://github.com/arpan65/Insurance-RAG-Chatbot
     cd Insurance-RAG-Chatbot
     ```
 
 2. **Set up AWS services**:
 
     - Ensure you have the required IAM roles and permissions for accessing bedrock from the chatbot.
-    - Set up AWS Bedrock and EC2 instances as needed.
-    ```bash
-    git clone [https://github.com/your-repo/IVA.git](https://github.com/arpan65/Insurance-RAG-Chatbot)
-    cd Insurance-RAG-Chatbot
-    ```
+    - Set up AWS Bedrock Model Permissions and EC2 instances as needed.
 
 3. **Deploy the chatbot on EC2**:
 
@@ -82,16 +78,23 @@ IVA is a prototype chatbot designed to retrieve and generate answers to policy h
 
 ### Usage
 
-- Access the chatbot interface via the URL of your EC2 instance.
+- Create a /docs folder in rag-source bucket.
+- Upload the policy document in the docs folder with proper naming convention (i.e sample_policy_doc_{policy number}.
+- Browse the static webpage from  the S3 website bucket.
+- Access the chatbot interface from the webpage.
 - Enter your policy ID and submit queries to get detailed responses based on your policy documents.
 
 ## Example Questions for Demo
 
-- "What is covered under accidental damage in my policy?"
-- "Does my policy cover damage to underground pipes?"
-- "What are the exclusions for storm damage?"
-- "How do I claim for accidental breakage of fixed glass?"
-- "What are the limits for finding the source of damage to my home?"
+- **Accidental Damage Coverage**: "What is covered under accidental damage in my policy?"
+- **Damage to Underground Pipes**: "Does my policy cover damage to underground pipes?"
+
+- **Exclusions for Storm Damage**: "What are the exclusions for storm damage in my policy?"
+
+- **Claim Process for Fixed Glass Breakage**: "How do I claim for accidental breakage of fixed glass according to my policy?"
+
+- **Limits for Finding Damage Source**: "What are the limits for finding the source of damage to my home in my policy?"
+
 
 ## Troubleshooting
 
