@@ -1,7 +1,7 @@
 # IVA: Retrieval-Augmented-Generation Chatbot
 
 IVA(Insurance Virtual Agent) is a prototype chatbot designed to retrieve and generate answers to policy holders' queries based on policy documents. The chatbot leverages AWS Bedrock and other AWS services such as Lambda, EC2, S3, along with LangChain and Docker, to deliver efficient and accurate responses.
-![IVA Screensot](screenshots/bot2.png)
+![IVA Screensot](Screenshots/bot3.png)
 ## Features
 
 - **Retrieval-Augmented-Generation (RAG)**: Combines retrieval of relevant document snippets with natural language generation to provide detailed answers.
