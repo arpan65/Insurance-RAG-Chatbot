@@ -44,26 +44,37 @@ IVA is a prototype chatbot designed to retrieve and generate answers to policy h
 1. **Clone the repository**:
 
     ```bash
-    git clone https://github.com/your-repo/IVA.git
-    cd IVA
+    git clone [https://github.com/your-repo/IVA.git](https://github.com/arpan65/Insurance-RAG-Chatbot)
+    cd Insurance-RAG-Chatbot
     ```
 
 2. **Set up AWS services**:
 
-    - Ensure you have the required IAM roles and permissions.
-    - Set up AWS Bedrock, S3 buckets, and EC2 instances as needed.
-
-3. **Build and run Docker container**:
-
+    - Ensure you have the required IAM roles and permissions for accessing bedrock from the chatbot.
+    - Set up AWS Bedrock and EC2 instances as needed.
     ```bash
-    docker build -t iva-chatbot .
-    docker run -p 8501:8501 iva-chatbot
+    git clone [https://github.com/your-repo/IVA.git](https://github.com/arpan65/Insurance-RAG-Chatbot)
+    cd Insurance-RAG-Chatbot
     ```
 
-4. **Deploy Lambda functions**:
+3. **Deploy the chatbot on EC2**:
 
-    - Package and deploy the Lambda functions using AWS CLI or the AWS Management Console.
+    - Deploy the chatbot on EC2 using the commands in setup folder.
+  
+4. **Deploy the AWS Services**:
 
+    ```bash
+    npm install -g aws-cdk
+    cdk bootstrap aws://YOUR-AWS-ACCOUNT-ID/YOUR-AWS-REGION
+    cdk deploy
+    ```
+   This will create and configure the following resources:
+    - S3 bucket for hosting the static website and deploying the contents of the website directory automatically.
+    - S3 bucket for storing document sources.
+    - IAM roles for Lambda functions.
+    - Lambda functions for document processing and embedding generation.
+    - S3 event notifications to trigger Lambda functions.
+      
 5. **Configure Nginx for HTTPS (optional)**:
 
     - If you need to secure your application with HTTPS, set up Nginx as a reverse proxy and configure SSL certificates.
