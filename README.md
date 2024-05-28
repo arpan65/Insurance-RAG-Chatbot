@@ -11,7 +11,7 @@ IVA is a prototype chatbot designed to retrieve and generate answers to policy h
 
 ## Architecture
 
-![IVA Architecture](architecture/architecture.png)
+![IVA Architecture](architecture/architecture.drawio.png)
 
 ## Components
 
