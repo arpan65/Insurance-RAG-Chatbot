@@ -16,8 +16,8 @@ sudo service docker start
 sudo chkconfig docker on
 
 # Clone Streamlit app repository
-git clone https://github.com/arpan65/RAG-Chat-App.git
-cd RAG-Chat-App
+git clone https://github.com/arpan65/Insurance-RAG-Chatbot.git
+cd Insurance-RAG-Chatbot/ChatUI/ChatApp
 
 # Build Docker image
 sudo docker build -t chatApp .
